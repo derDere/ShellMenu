@@ -1,2 +1,4 @@
-python3 main.py $*
+[ ! -d "$HOME/.config" ] && mkdir "$HOME/.config"
+[ ! -d "$HOMR/.config/shell-menu" ] && mkdir "$HOME/.config/shell-menu"
 
+python3 main.py $*

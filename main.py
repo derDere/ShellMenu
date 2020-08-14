@@ -18,7 +18,7 @@ class App:
   A_HELP = 0
   A_TERM_1 = 0
   A_TERM_2 = 0
-  
+
   def __init__(self):
     self.debug = False
     self.reload = False
@@ -76,7 +76,7 @@ class App:
     self.moveSystemWin()
     update_panels()
     doupdate()
-  
+
   def showTerminalInput(self):
     global A_TERM_1, A_TERM_2
     (max_y, max_x) = getmaxyx(self.stdscr)
@@ -116,7 +116,7 @@ class App:
     if len(command) > 0:
       self.command = Command(command, True)
       self.running = False
-  
+
   def showHelpWin(self):
     global A_HELP
     (max_y, max_x) = getmaxyx(self.stdscr)
@@ -149,7 +149,7 @@ class App:
     doupdate()
     getkey(hw)
     delwin(hw)
-  
+
   def itemDoAction(self, item, showHelp=False):
     if item.type == ITEM_TYPE_SUBMENU:
       self.createWindow(item.content)
@@ -164,7 +164,7 @@ class App:
         command += " --help|more"
       self.command = Command(command, read)
       self.running = False
-  
+
   def createWindow(self, menu):
     global A_ITM, A_SELECTED
     self.currentMenu = menu
@@ -179,17 +179,17 @@ class App:
     self.panel = new_panel(self.window)
     update_panels()
     doupdate()
-  
+
   def createInfoWin(self):
     global A_INFO
     self.infoWin = newwin(1, 42, 1, 2)
     self.infoPan = new_panel(self.infoWin)
     waddstr(self.infoWin, "q = quit, h = help, r = reload, TAB = back", color_pair(A_INFO))
-  
+
   def moveSystemWin(self):
     (max_y,max_x) = getmaxyx(self.stdscr)
     move_panel(self.sysPan, max_y - (self.sysWinH + 1), max_x - (self.sysWinW + 1))
-  
+
   def createSystemWin(self):
     global A_SYSTEM
     usr_str = "%s@" % mySys.username()
@@ -221,14 +221,14 @@ class App:
     mvwaddstr(self.sysWin, y, w - len(machin_str), machin_str, color_pair(A_SYSTEM))
     y += 1
     mvwaddstr(self.sysWin, y, w - len(dir_str), dir_str, color_pair(A_SYSTEM))
-  
+
   def load(self):
     self.reload = False
     self.config = Config()
     self.config.reload()
     self.config.createMenu()
     self.currentMenu = self.config.menu
-  
+
   def run(self):
     global A_ITM, A_SELECTED, A_INFO, A_SYSTEM, A_HELP, A_TERM_1, A_TERM_2
     with unicurses_guard() as stdscr:
@@ -245,7 +245,7 @@ class App:
       self.createWindow(self.currentMenu)
       while self.running:
         self.windowDoAction()
-      self.running = True      
+      self.running = True
 
 
 def main(argv):
@@ -269,7 +269,6 @@ def main(argv):
       app.command = None
       if app.reload:
         app.load()
-      
 
 
 if __name__=="__main__":

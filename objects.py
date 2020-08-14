@@ -3,7 +3,7 @@ import json
 from unicurses import *
 from collections import OrderedDict
 
-CONFIG_FILE_NAME = "~/.menu_config.json"
+CONFIG_FILE_NAME = "~/.config/shell-menu/.menu_config.json"
 
 ITEM_TYPE_TEXT = 1
 ITEM_TYPE_COMMAND = 2
@@ -18,7 +18,7 @@ class Menu:
     self.height = 1
     self.width = 1
     self.offset = 0
-  
+
   def addItm(self, newItem):
     self.items.append(newItem)
     newItem.parent = self
@@ -29,7 +29,7 @@ class Menu:
     self.height += newItem.rows
     if newItem.width > self.width:
       self.width = newItem.width
-  
+
   def next(self):
     changedItems = []
     if self.selectedIndex == -1:
@@ -47,7 +47,7 @@ class Menu:
     self.items[self.selectedIndex].isSelected = True
     changedItems.append(self.selectedIndex)
     return changedItems
-  
+
   def previus(self):
     changedItems = []
     if self.selectedIndex == -1:
@@ -65,7 +65,7 @@ class Menu:
     self.items[self.selectedIndex].isSelected = True
     changedItems.append(self.selectedIndex)
     return changedItems
-  
+
   def update(self, max_y, window, A_ITM, A_SELECTED):
     selectedItm = self.items[self.selectedIndex]
     if (selectedItm.y + selectedItm.rows - self.offset) > max_y:
@@ -75,7 +75,7 @@ class Menu:
     if self.offset < 0:
       self.offset = 0
     self.drawItems(max_y, window, A_ITM, A_SELECTED)
-  
+
   def drawItems(self, max_y, window, A_ITM, A_SELECTED):
     wclear(window)
     for itm in self.items:
@@ -105,7 +105,7 @@ class Item:
     else:
       self.rows = 1
       self.width = len(self.text)
-  
+
   def draw(self, max_y, win, A_ITM, A_SELECTED):
     style = A_ITM
     if self.selectable and self.isSelected:
@@ -130,7 +130,7 @@ class Config:
     self.menu = None
     self.path = os.path.expanduser(path)
     self.data = {}
-  
+
   def reload(self):
     if os.path.isfile(self.path):
       with open( self.path, "r" ) as file:
@@ -150,7 +150,7 @@ class Config:
           '  if a command ends with "&read" the menu will wait for an [Enter] afterwards.'
         ]
       }
-      
+
   def createMenu(self):
     def MenuFromDict(data):
       menu = Menu()
@@ -167,7 +167,7 @@ class Config:
         index += 1
       return menu
     self.menu = MenuFromDict(self.data)
-  
+
 
 if __name__=="__main__":
   eingabe = Input("Enter \"test\" to test stuff.")
