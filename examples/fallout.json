@@ -9,5 +9,19 @@
     "",
     "Please choose an option:"
   ],
-  "Deactivate": "echo Make love not war"
+  "Shoot": "echo BOOOOOOOOOOOOOOOOOM&read",
+  "Deactivate": "echo Make love not war&read",
+  "Change lazer color": {
+    "T2": [
+      "Please select your favorite lazer color:"
+    ],
+    "Pink": "echo WOW thats my favorite to!!!&read",
+    "Red": "echo old school super vilan&read",
+    "Blue": "echo FUTURE IS NOW&read",
+    "Green": "echo Very well my padawan&read",
+    "Yellow": "echo Thats just light&read",
+    "Black": "echo Ninja Lazer Style&read"
+  },
+  "T3": [""],
+  "Open the pod bay doors please": "echo I\\'m sorry Dave, I\\'m afraid I can\\'t do that&read"
 }
