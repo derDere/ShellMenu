@@ -1,7 +1,7 @@
 All:
 	@echo run \"sudo make install\" to install ShellMenu
 
-.PHONY: uninstall
+.PHONY: uninstall install
 
 install: .a57z6s_runinstallatation
 	@echo DONE
