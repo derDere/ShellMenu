@@ -58,9 +58,9 @@ class App:
       self.itemDoAction(self.currentMenu.items[self.currentMenu.selectedIndex], True)
     if (k == 'h'):
       self.showHelpWin()
-    if (k == 'e') or (k == "\n"):
+    if (k == 'e') or (k == "\n") or (k == 'd') or (k == 'KEY_RIGHT'):
       self.itemDoAction(self.currentMenu.items[self.currentMenu.selectedIndex])
-    if ((k == '\t') or (k == 'KEY_BACKSPACE')) and (self.currentMenu.parent != None):
+    if ((k == '\t') or (k == 'KEY_BACKSPACE') or (k == 'a') or (k == 'KEY_LEFT')) and (self.currentMenu.parent != None):
       self.createWindow(self.currentMenu.parent.parent)
     if (k == 'w') or (k == "KEY_UP"):
       self.currentMenu.previus()

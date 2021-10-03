@@ -26,6 +26,27 @@ Then use make to run the installation:
 sudo make install
 ```
 
+## Usage
+
+To start just run the following command in your terminal:
+
+```shell
+shell-menu
+```
+
+Within the menu you can open a help prompt using the h key. You can reload using the r key.
+You can edit your current config by pressing c and you can execute terminal commands using the t key.
+To exit the menu press q or ESCAPE.
+You can navigate throu the menu using the arrow keys or W,A,S,D.
+Some keys like ENTER, d or KEY_RIGHT have the same functions.
+Here is a table of the keylayout:
+
+<html>
+<b>TEST</b>
+<html/>
+
+## Configuration
+
 ## Origin
 
 bla bla bla

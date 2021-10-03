@@ -3,7 +3,7 @@ import json
 from unicurses import *
 from collections import OrderedDict
 
-CONFIG_FILE_NAME = "~/.config/shell-menu/.menu_config.json"
+CONFIG_FILE_NAME = "~/.config/shell-menu/menu_config.json"
 
 ITEM_TYPE_TEXT = 1
 ITEM_TYPE_COMMAND = 2
