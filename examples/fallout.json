@@ -1,7 +1,7 @@
 {
   "T1": [
     "Welcome to ROBCO Industries (TM) Termlink",
-    "",
+    "", "",
     "LaZeR-Sec Systems",
     "Optical Intrusion Detection",
     "",
@@ -23,5 +23,6 @@
     "Black": "echo Ninja Lazer Style&read"
   },
   "T3": [""],
-  "Open the pod bay doors please": "echo I\\'m sorry Dave, I\\'m afraid I can\\'t do that&read"
+  "Open the pod bay doors please": "echo I\\'m sorry Dave, I\\'m afraid I can\\'t do that&read",
+  "T4": ["", "", "", "", "> Accessing Functions..."]
 }
