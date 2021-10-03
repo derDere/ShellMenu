@@ -56,6 +56,19 @@ The configuration is stored entirely in a JSON file. The following explanation a
 If that's not the case have a look at the folowing link: [w3schools JSON syntax](https://www.w3schools.com/js/js_json_syntax.asp)
 
 ### Commands
+If you want to add a command option to your menu (for example opening htop) you just have to add a key with a string value to your JSON object.
+The key will be shown inside the menu and the string value will be the command executed.
+
+```json
+"Open htop": "htop"
+```
+
+After completing the execution of the command the menu will reopen by default.
+If you wish the command to wait until you press enter end the command with the string ```&read``` all lowercase no whitespaces.
+
+```json
+"Show Datetime": "date&read"
+```
 
 ### Text
 
