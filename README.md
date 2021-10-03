@@ -15,15 +15,17 @@ ShellMenu is a fallout 4 inspired Menu system written in python, configured with
 ## Installation
 
 After installing all dependencies use pip to install the package netifaces:
-"""
-// shell
+
+```shell
 sudo pip install netifaces
-"""
+```
+
 Then use make to run the installation:
-"""
-// shell
+
+```shell
 sudo make install
-"""
+```
 
 ## Origin
+
 bla bla bla
