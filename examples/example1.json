@@ -1,0 +1,12 @@
+{
+  "T1": [
+    "This is a Example Text."
+  ],
+  "Submenu": {
+    "T1": [
+      "This is a Submenu"
+    ]
+  },
+  "List current dir": "ls -l &read",
+  "Open nano": "nano"
+}
