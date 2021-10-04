@@ -1,4 +1,6 @@
 [ ! -d "$HOME/.config" ] && mkdir -p "$HOME/.config"
 [ ! -d "$HOMR/.config/shell-menu" ] && mkdir -p "$HOME/.config/shell-menu"
 
-python3 ./main.py $*
+SCRIPTDIR=$(dirname "$0")
+
+python3 /opt/ShellMenu/main.py $*
