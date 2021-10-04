@@ -82,7 +82,7 @@ If the key is not unique that will override the previous one. (I just add a numb
 ],
 "T2": [
     "Another Line of text"
-}
+]
 ```
 
 Do not use new line characters to create new lines rather than just a new string value to prevent displaying errors!
