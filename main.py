@@ -47,7 +47,8 @@ class App:
       self.running = False
       return
     if (k == 'c'):
-      self.command = Command("nano %s" % CONFIG_FILE_NAME, False)
+      editor = os.getenv('EDITOR', 'nano')
+      self.command = Command("%s %s" % (editor, CONFIG_FILE_NAME), False)
       self.running = False
       return
     if (k == 'r'):
