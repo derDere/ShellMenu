@@ -71,10 +71,47 @@ If you wish the command to wait until you press enter end the command with the s
 ```
 
 ### Text
+If you want to add text to a menu just add a key with an array value containing each line of text as a string value.
+The content of the key will not be displayed so its content doesn't realy matter, it just has to be unique.
+If the key is not unique that will override the previous one. (I just add a number counting up each time.)
+
+```json
+"T1": [
+    "Text Line 1",
+    "Text Line 2"
+],
+"T2": [
+    "Another Line of text"
+}
+```
+
+Do not use new line characters to create new lines rather than just a new string value to prevent displaying errors!
 
 ### Submenu
+Creating a submenu is simple just add a key with an object value containing more keys. The key will be the title displayed in the parent menu,
+and the content of the object will be used to display the submenu.
+
+```json
+"Open Submenu": {
+    "T1": [ "Submenu Title" ],
+    "Submenu Option": "echo Hello&read"
+}
+```
+
+If you want to see all examples used in one config file take a look at "examples/readme_example.json".
 
 
 Origin
 ------
-bla bla bla
+Before I was a Linux fan, I was a bit put of by the use of the terminal. Mainly bacause I wasn't compfy using it.
+But I still wanted to get into Linux and a lot of my dev friend where using Ubuntu.
+So what I did was: I installed Ubuntu Server Edition on one of my old Laptops, forcing me to only use the terminal.
+After hours of tinkering around to get the freaking wifi to work I started to look at curses/terminal based applications.
+So after finding some applications like wicd-curses, ranger, pulsemixer and gotop, I wanted a way to acces them easely.
+And as a developer, who was currently playing the Fallout 4 game, I took the for me quickest aproach and just recreated
+the TUI from the Fallout Terminals. I was quite happy so far and now after a few years of ignoring this litte project
+I decided to revive it and tidy it up for others to enjoy.
+
+I am planing on creating a faster more customizable version using c++ in the future. And for some fun I will also recreate the
+fallout hacking minigame, at least if no one has already done so. Have fun using this Version, I am open for sugjestios for the versoin 2.0.
+I won't be changing this old one up to much tho.

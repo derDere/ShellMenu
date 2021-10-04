@@ -1,0 +1,23 @@
+{
+  "T0": [
+    "Example Menu Title",
+    "",
+    "This config uses the examples from the readme file.",
+    ""
+  ],
+  "Open htop": "htop",
+  "Show Datetime": "date&read",
+  "T1": [
+    "Text Line 1",
+    "Text Line 2"
+  ],
+  "Option Inbetween": "echo just to fill the menu up&read",
+  "T2": [
+    "Another Line of text"
+  ],
+  "Open Submenu": {
+    "T1": [ "Submenu Title" ],
+    "Submenu Option": "echo Hello&read"
+  },
+  "Last option": "echo Example ends here&read"
+}
